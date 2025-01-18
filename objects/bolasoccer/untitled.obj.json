@@ -1,0 +1,39 @@
+{
+  "created_at": "2025-01-14T15:03:09.045903",
+  "version": "0.1",
+  "mtllibs": [
+    "untitled.mtl"
+  ],
+  "vertex_buffers": [
+    {
+      "material": "Black",
+      "vertex_format": "V3F",
+      "byte_offset": 0,
+      "byte_length": 196560
+    },
+    {
+      "material": "Material.001",
+      "vertex_format": "V3F",
+      "byte_offset": 196560,
+      "byte_length": 9907200
+    },
+    {
+      "material": "Material.002",
+      "vertex_format": "V3F",
+      "byte_offset": 10103760,
+      "byte_length": 72
+    },
+    {
+      "material": "Material.003",
+      "vertex_format": "V3F",
+      "byte_offset": 10103832,
+      "byte_length": 73728
+    },
+    {
+      "material": "White",
+      "vertex_format": "V3F",
+      "byte_offset": 10177560,
+      "byte_length": 393120
+    }
+  ]
+}

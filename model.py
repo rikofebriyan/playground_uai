@@ -112,9 +112,61 @@ class Cat(ExtendedBaseModel):
         app,
         vao_name="cat",
         tex_id="cat",
-        pos=(0, 6, 0),
+        pos=(0, 0, 0),
+        rot=(0, -20, 0),
+        scale=(0.10, 0.10, 0.10),
+    ):
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
+class Bola(ExtendedBaseModel):
+    def __init__(
+        self,
+        app,
+        vao_name="bola",
+        tex_id="bola",
+        pos=(0, 0, 0),
         rot=(0, 0, 0),
-        scale=(0.15, 0.15, 0.15),
+        scale=(3, 3, 3),
+    ):
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
+class FenceRight(ExtendedBaseModel):
+    def __init__(
+        self,
+        app,
+        vao_name="fenceRight",
+        tex_id="fenceRight",
+        pos=(0, 0, 0),
+        rot=(0, -200, 0),
+        scale=(0.10, 0.10, 0.10),
+    ):
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
+class FenceBack(ExtendedBaseModel):
+    def __init__(
+        self,
+        app,
+        vao_name="fenceback",
+        tex_id="fenceback",
+        pos=(0, 0, 0),
+        rot=(0, -110, 0),
+        scale=(0.10, 0.10, 0.10),
+    ):
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
+class FenceFront(ExtendedBaseModel):
+    def __init__(
+        self,
+        app,
+        vao_name="fencefront",
+        tex_id="fencefront",
+        pos=(0, 0, 0),
+        rot=(0, -290, 0),
+        scale=(0.10, 0.10, 0.10),
     ):
         super().__init__(app, vao_name, tex_id, pos, rot, scale)
 

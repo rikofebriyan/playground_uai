@@ -1,0 +1,19 @@
+{
+  "created_at": "2025-01-14T14:56:43.299416",
+  "version": "0.1",
+  "mtllibs": [],
+  "vertex_buffers": [
+    {
+      "material": "Bianco",
+      "vertex_format": "V3F",
+      "byte_offset": 0,
+      "byte_length": 781920
+    },
+    {
+      "material": "Nero.001",
+      "vertex_format": "V3F",
+      "byte_offset": 781920,
+      "byte_length": 390960
+    }
+  ]
+}

@@ -40,6 +40,50 @@ class VAO:
             vbo=self.vbo.vbos["advanced_skybox"],
         )
 
+        # bola vao
+        self.vaos["bola"] = self.get_vao(
+            program=self.program.programs["default"],
+            vbo=self.vbo.vbos["bola"],
+        )
+
+        # shadow bola vao
+        self.vaos["shadow_bola"] = self.get_vao(
+            program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["bola"]
+        )
+
+        # fenceRight vao
+        self.vaos["fenceRight"] = self.get_vao(
+            program=self.program.programs["default"],
+            vbo=self.vbo.vbos["fenceRight"],
+        )
+
+        # shadow fenceRight vao
+        self.vaos["shadow_fenceRight"] = self.get_vao(
+            program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["fenceRight"]
+        )
+
+        # fenceback vao
+        self.vaos["fenceback"] = self.get_vao(
+            program=self.program.programs["default"],
+            vbo=self.vbo.vbos["fenceback"],
+        )
+
+        # shadow fenceback vao
+        self.vaos["shadow_fenceback"] = self.get_vao(
+            program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["fenceback"]
+        )
+
+        # fencefront vao
+        self.vaos["fencefront"] = self.get_vao(
+            program=self.program.programs["default"],
+            vbo=self.vbo.vbos["fencefront"],
+        )
+
+        # shadow fencefront vao
+        self.vaos["shadow_fencefront"] = self.get_vao(
+            program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["fencefront"]
+        )
+
     def get_vao(self, program, vbo):
         vao = self.ctx.vertex_array(
             program, [(vbo.vbo, vbo.format, *vbo.attribs)], skip_errors=True

@@ -10,6 +10,10 @@ class VBO:
         self.vbos["cat"] = CatVBO(ctx)
         self.vbos["skybox"] = SkyBoxVBO(ctx)
         self.vbos["advanced_skybox"] = AdvancedSkyBoxVBO(ctx)
+        self.vbos["bola"] = BolaVBO(ctx)
+        self.vbos["fenceRight"] = FenceRightVBO(ctx)
+        self.vbos["fenceback"] = FenceBackVBO(ctx)
+        self.vbos["fencefront"] = FenceFrontVBO(ctx)
 
     def destroy(self):
         [vbo.destroy() for vbo in self.vbos.values()]
@@ -188,4 +192,96 @@ class AdvancedSkyBoxVBO(BaseVBO):
         z = 0.9999
         vertices = [(-1, -1, z), (3, -1, z), (-1, 3, z)]
         vertex_data = np.array(vertices, dtype="f4")
+        return vertex_data
+
+
+class BolaVBO(BaseVBO):
+    def __init__(self, ctx):
+        super().__init__(ctx)
+        self.format = "2f 3f 3f"
+        self.attribs = ["in_texcoord_0", "in_normal", "in_position"]
+
+    def get_vertex_data(self):
+        # Load .obj without .mtl
+        objs = pywavefront.Wavefront(
+            "objects/sphere/sphere.obj",
+            cache=True,
+            parse=True,
+            collect_faces=True,  # Ensure face data is collected
+            create_materials=True,  # Automatically create default materials
+        )
+
+        # Extract geometry data from the first material
+        obj = list(objs.materials.values())[0]
+        vertex_data = obj.vertices  # Access vertex data
+        vertex_data = np.array(vertex_data, dtype="f4")  # Convert to NumPy array
+        return vertex_data
+
+
+class FenceRightVBO(BaseVBO):
+    def __init__(self, ctx):
+        super().__init__(ctx)
+        self.format = "2f 3f 3f"
+        self.attribs = ["in_texcoord_0", "in_normal", "in_position"]
+
+    def get_vertex_data(self):
+        # Load .obj without .mtl
+        objs = pywavefront.Wavefront(
+            "objects/cat/fence.obj",
+            cache=True,
+            parse=True,
+            collect_faces=True,  # Ensure face data is collected
+            create_materials=True,  # Automatically create default materials
+        )
+
+        # Extract geometry data from the first material
+        obj = list(objs.materials.values())[0]
+        vertex_data = obj.vertices  # Access vertex data
+        vertex_data = np.array(vertex_data, dtype="f4")  # Convert to NumPy array
+        return vertex_data
+
+
+class FenceBackVBO(BaseVBO):
+    def __init__(self, ctx):
+        super().__init__(ctx)
+        self.format = "2f 3f 3f"
+        self.attribs = ["in_texcoord_0", "in_normal", "in_position"]
+
+    def get_vertex_data(self):
+        # Load .obj without .mtl
+        objs = pywavefront.Wavefront(
+            "objects/cat/fence.obj",
+            cache=True,
+            parse=True,
+            collect_faces=True,  # Ensure face data is collected
+            create_materials=True,  # Automatically create default materials
+        )
+
+        # Extract geometry data from the first material
+        obj = list(objs.materials.values())[0]
+        vertex_data = obj.vertices  # Access vertex data
+        vertex_data = np.array(vertex_data, dtype="f4")  # Convert to NumPy array
+        return vertex_data
+
+
+class FenceFrontVBO(BaseVBO):
+    def __init__(self, ctx):
+        super().__init__(ctx)
+        self.format = "2f 3f 3f"
+        self.attribs = ["in_texcoord_0", "in_normal", "in_position"]
+
+    def get_vertex_data(self):
+        # Load .obj without .mtl
+        objs = pywavefront.Wavefront(
+            "objects/cat/fence.obj",
+            cache=True,
+            parse=True,
+            collect_faces=True,  # Ensure face data is collected
+            create_materials=True,  # Automatically create default materials
+        )
+
+        # Extract geometry data from the first material
+        obj = list(objs.materials.values())[0]
+        vertex_data = obj.vertices  # Access vertex data
+        vertex_data = np.array(vertex_data, dtype="f4")  # Convert to NumPy array
         return vertex_data
