@@ -1,4 +1,6 @@
-# 3D-Graphics-Engine
-OpenGL Graphics Engine in Python ( Pygame, ModernGL ) 
+# PLAYGROUND OPENGL
 
-![opengl](/screenshot/0.jpg)
+OpenGL Graphics Engine in Python ( Pygame, ModernGL )
+
+![opengl](/screenshot/team.png)
+![opengl](/screenshot/playground.png)

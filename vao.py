@@ -46,6 +46,28 @@ class VAO:
             vbo=self.vbo.vbos["bola"],
         )
 
+        # apple vao
+        self.vaos["apple"] = self.get_vao(
+            program=self.program.programs["default"],
+            vbo=self.vbo.vbos["apple"],
+        )
+
+        # cone vao
+        self.vaos["cone"] = self.get_vao(
+            program=self.program.programs["default"],
+            vbo=self.vbo.vbos["cone"],
+        )
+
+        # shadow apple vao
+        self.vaos["shadow_apple"] = self.get_vao(
+            program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["apple"]
+        )
+
+        # shadow cone vao
+        self.vaos["shadow_cone"] = self.get_vao(
+            program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["cone"]
+        )
+
         # shadow bola vao
         self.vaos["shadow_bola"] = self.get_vao(
             program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["bola"]
@@ -83,6 +105,63 @@ class VAO:
         self.vaos["shadow_fencefront"] = self.get_vao(
             program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["fencefront"]
         )
+
+        # papan vao
+        self.vaos["papan"] = self.get_vao(
+            program=self.program.programs["default"],
+            vbo=self.vbo.vbos["papan"],
+        )
+
+        # shadow papan vao
+        self.vaos["shadow_papan"] = self.get_vao(
+            program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["papan"]
+        )
+
+        # table vao
+        self.vaos["table"] = self.get_vao(
+            program=self.program.programs["default"],
+            vbo=self.vbo.vbos["table"],
+        )
+
+        # shadow table vao
+        self.vaos["shadow_table"] = self.get_vao(
+            program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["table"]
+        )
+
+        # cylinder vao
+        self.vaos["cylinder"] = self.get_vao(
+            program=self.program.programs["default"],
+            vbo=self.vbo.vbos["cylinder"],
+        )
+
+        # shadow cylinder vao
+        self.vaos["shadow_cylinder"] = self.get_vao(
+            program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["cylinder"]
+        )
+
+        # darkwall vao
+        self.vaos["darkwall"] = self.get_vao(
+            program=self.program.programs["default"],
+            vbo=self.vbo.vbos["darkwall"],
+        )
+
+        # shadow darkwall vao
+        self.vaos["shadow_darkwall"] = self.get_vao(
+            program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["darkwall"]
+        )
+
+        # mug vao
+        self.vaos["mug"] = self.get_vao(
+            program=self.program.programs["default"],
+            vbo=self.vbo.vbos["mug"],
+        )
+
+        # shadow mug vao
+        self.vaos["shadow_mug"] = self.get_vao(
+            program=self.program.programs["shadow_map"], vbo=self.vbo.vbos["mug"]
+        )
+
+
 
     def get_vao(self, program, vbo):
         vao = self.ctx.vertex_array(

@@ -8,7 +8,7 @@ class Texture:
         self.app = app
         self.ctx = app.ctx
         self.textures = {}
-        self.textures[0] = self.get_texture(path="textures/img.png")
+        self.textures[0] = self.get_texture(path="textures/img.jpg")
         self.textures[1] = self.get_texture(path="textures/img_1.jpg")
         self.textures[2] = self.get_texture(path="textures/img_2.jpg")
         self.textures["cat"] = self.get_texture(path="objects/cat/fence.png")
@@ -17,9 +17,18 @@ class Texture:
         )
         self.textures["depth_texture"] = self.get_depth_texture()
         self.textures["bola"] = self.get_texture(path="objects\sphere\darkMarble.jpg")
+        self.textures["apple"] = self.get_texture(
+            path="newobjects\Shading&Texture\Texture\Apple_Sphere.png"
+        )
+        self.textures["cone"] = self.get_texture(path="textures/cone2.png")
         self.textures["fenceRight"] = self.get_texture(path="objects/cat/fence.png")
         self.textures["fenceback"] = self.get_texture(path="objects/cat/fence.png")
         self.textures["fencefront"] = self.get_texture(path="objects/cat/fence.png")
+        self.textures["papan"] = self.get_texture(path="textures/team.png")
+        self.textures["table"] = self.get_texture(path="textures/wood_meja2.png")
+        self.textures["cylinder"] = self.get_texture(path="textures/metal.jpg")
+        self.textures["darkwall"] = self.get_texture(path="textures/bricks.jpg")
+        self.textures["mug"] = self.get_texture(path="textures/img_2.jpg")
 
     def get_depth_texture(self):
         depth_texture = self.ctx.depth_texture(self.app.WIN_SIZE)

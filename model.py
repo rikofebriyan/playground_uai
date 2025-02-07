@@ -91,7 +91,7 @@ class Cube(ExtendedBaseModel):
         vao_name="cube",
         tex_id=0,
         pos=(0, 0, 0),
-        rot=(0, 0, 0),
+        rot=(0, 180, 0),
         scale=(1, 1, 1),
     ):
         super().__init__(app, vao_name, tex_id, pos, rot, scale)
@@ -127,7 +127,33 @@ class Bola(ExtendedBaseModel):
         tex_id="bola",
         pos=(0, 0, 0),
         rot=(0, 0, 0),
-        scale=(3, 3, 3),
+        scale=(1, 1, 1),
+    ):
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
+class Apple(ExtendedBaseModel):
+    def __init__(
+        self,
+        app,
+        vao_name="apple",
+        tex_id="apple",
+        pos=(0, 0, 0),
+        rot=(0, 0, 0),
+        scale=(0.75, 0.75, 0.75),
+    ):
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
+class Cone(ExtendedBaseModel):
+    def __init__(
+        self,
+        app,
+        vao_name="cone",
+        tex_id="cone",
+        pos=(0, 0, 0),
+        rot=(0, 0, 0),
+        scale=(0.5, 0.5, 0.5),
     ):
         super().__init__(app, vao_name, tex_id, pos, rot, scale)
 
@@ -167,6 +193,71 @@ class FenceFront(ExtendedBaseModel):
         pos=(0, 0, 0),
         rot=(0, -290, 0),
         scale=(0.10, 0.10, 0.10),
+    ):
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
+class Papan(ExtendedBaseModel):
+    def __init__(
+        self,
+        app,
+        vao_name="papan",
+        tex_id="papan",
+        pos=(0, 0, 0),
+        rot=(90, 90, 0),
+        scale=(2, 2, 2),
+    ):
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
+class Table(ExtendedBaseModel):
+    def __init__(
+        self,
+        app,
+        vao_name="table",
+        tex_id="table",
+        pos=(0, 0, 0),
+        rot=(0, 0, 0),
+        scale=(1, 1, 1),
+    ):
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
+class Cylinder(ExtendedBaseModel):
+    def __init__(
+        self,
+        app,
+        vao_name="cylinder",
+        tex_id="cylinder",
+        pos=(0, 0, 0),
+        rot=(0, 0, 0),
+        scale=(0.5, 0.5, 0.5),
+    ):
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
+class Darkwall(ExtendedBaseModel):
+    def __init__(
+        self,
+        app,
+        vao_name="darkwall",
+        tex_id="darkwall",
+        pos=(0, 0, 0),
+        rot=(0, 90, 0),
+        scale=(0.5, 0.5, 0.5),
+    ):
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
+class Mug(ExtendedBaseModel):
+    def __init__(
+        self,
+        app,
+        vao_name="mug",
+        tex_id="mug",
+        pos=(0, 0, 0),
+        rot=(0, 90, 0),
+        scale=(0.5, 0.5, 0.5),
     ):
         super().__init__(app, vao_name, tex_id, pos, rot, scale)
 

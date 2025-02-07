@@ -21,7 +21,7 @@ class GraphicsEngine:
         pg.display.gl_set_attribute(
             pg.GL_CONTEXT_PROFILE_MASK, pg.GL_CONTEXT_PROFILE_CORE
         )
-        # create opengl context
+        # create opengl contextw
         pg.display.set_mode(self.WIN_SIZE, flags=pg.OPENGL | pg.DOUBLEBUF)
         # mouse settings
         pg.event.set_grab(True)

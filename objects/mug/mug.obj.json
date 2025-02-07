@@ -1,0 +1,19 @@
+{
+  "created_at": "2025-02-07T04:00:34.236989",
+  "version": "0.1",
+  "mtllibs": [],
+  "vertex_buffers": [
+    {
+      "material": "teamug",
+      "vertex_format": "T2F_N3F_V3F",
+      "byte_offset": 0,
+      "byte_length": 5695488
+    },
+    {
+      "material": "Material.001",
+      "vertex_format": "T2F_N3F_V3F",
+      "byte_offset": 5695488,
+      "byte_length": 192
+    }
+  ]
+}
